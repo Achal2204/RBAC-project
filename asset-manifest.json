@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Achal2204/RBAC-project/static/css/main.708231eb.css",
+    "main.js": "/Achal2204/RBAC-project/static/js/main.e85e1f14.js",
+    "index.html": "/Achal2204/RBAC-project/index.html",
+    "main.708231eb.css.map": "/Achal2204/RBAC-project/static/css/main.708231eb.css.map",
+    "main.e85e1f14.js.map": "/Achal2204/RBAC-project/static/js/main.e85e1f14.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.708231eb.css",
+    "static/js/main.e85e1f14.js"
+  ]
+}
