@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# RBAC-project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Role-Based Access Control (RBAC) Application
 
-In the project directory, you can run:
+This project is a Role-Based Access Control (RBAC) system built using React.js and JSON Server. It allows for role-based authentication and authorization, enabling different views and functionalities for Admin and User roles. The application includes features like user and role management, dynamic permissions, and secure login.
 
-### `npm start`
+Features
+User Management
+View, add, edit, and delete users.
+Assign roles and manage user activation status.
+Prevent inactive users from logging in.
+Role Management
+Define and edit roles.
+Assign permissions (Read, Write, Delete) to roles dynamically.
+Permissions dictate access to features like Add Spots, Explore, and Delete Spots.
+Authentication & Authorization
+Secure login with hashed passwords (using bcryptjs).
+Differentiated dashboards for Admin and User roles.
+Unauthorized users are restricted with appropriate alerts.
+Spot Management
+Add, view, and delete tourist spots.
+Manage spots based on role-specific permissions.
+Custom API Simulation
+Uses json-server to simulate API calls for CRUD operations.
+All data (users, roles, spots) is managed via JSON Server.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Getting Started
+Prerequisites
+Node.js installed
+npm (Node Package Manager)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. clone project
 
-### `npm test`
+2. Install dependencies: npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Start json server using : npx json-server --watch db.json --port 5000
 
-### `npm run build`
+4. Run the react app using : npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Usage
+Admin Features
+Login with admin credentials--> email:"admin123@gmail.com"
+				                        password:"achal123"
+Navigate to:
+User Management: Manage user details,assign roles, and activation.
+If user is inactive then that user cannot login
+Role Management: Assign permissions and create new role.
+Add Spots: Add new tourist spots (Permission based)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+User Features
+Login with valid user credentials--> email:"mark12@gmail.com"
+				                             password:"mark123"
+Or you can create new user using registration form
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Access:
+Home: View personalized welcome message.
+Explore: Browse tourist spots (based on Read permission).
